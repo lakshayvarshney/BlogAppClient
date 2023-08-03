@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react'
 import BlogCard from '../components/BlogCard'
 
 const UserBlogs = () => {
-    const serverurl = import.meta.env.VITE_SERVER_URL
+    
     const [blogs,setBlogs] = useState([])
 
     const getUserBlogs = async ()=>{
         try {
             const id = localStorage.getItem('userId')
-            const {data} = await axios.get(`${serverurl}/api/v1/blog/user-blog/${id}`)
+            const {data} = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/v1/blog/user-blog/${id}`)
             if(data?.success){
                 setBlogs(data?.userBlog.blogs)
             }

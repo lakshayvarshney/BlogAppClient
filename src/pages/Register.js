@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const Register = () => {
 
-  const serverurl = import.meta.env.VITE_SERVER_URL
+  
 
   const [input,setInput] = useState({
     name:'',
@@ -25,7 +25,7 @@ const Register = () => {
     e.preventDefault()
    
     try {
-      const {data} = await axios.post(`${serverurl}/api/v1/user/register`,{
+      const {data} = await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/v1/user/register`,{
         username:input.name,
         email:input.email,
         password:input.password})

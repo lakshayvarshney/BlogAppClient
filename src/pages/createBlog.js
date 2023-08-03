@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const CreateBlog = () => {
   
     const id = localStorage.getItem('userId')
-    const serverurl = import.meta.env.VITE_SERVER_URL
+   
     const navigate = useNavigate()
   const [inputs, setInputs] = useState({
     title: '',
@@ -25,7 +25,7 @@ const CreateBlog = () => {
     e.preventDefault();
     try {
 
-        const {data} = await axios.post(`${serverurl}/api/v1/blog/create-blog`,{
+        const {data} = await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/v1/blog/create-blog`,{
             title:inputs.title,
             description:inputs.description,
             image:inputs.image,

@@ -7,7 +7,7 @@ import { authActions } from '../redux/store'
 
 const Login = () => {
 
-  const serverurl = import.meta.env.VITE_SERVER_URL
+  
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ const Login = () => {
     e.preventDefault()
    
     try {
-      const {data} = await axios.post(`${serverurl}/api/v1/user/login`,{
+      const {data} = await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/v1/user/login`,{
         email:input.email,
         password:input.password})
       if(data.success){
