@@ -11,7 +11,7 @@ const BlogDetails = () => {
 
     const getBlogDetails = async ()=>{
         try {
-            const {data} = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/v1/blog/get-blog/${id}`)
+            const {data} = await axios.get(`https://blogapp-v0g5.onrender.com/api/v1/blog/get-blog/${id}`)
             if(data?.success){
                 setBlog(data?.blog)
                 setInputs({

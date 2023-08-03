@@ -25,7 +25,7 @@ const Register = () => {
     e.preventDefault()
    
     try {
-      const {data} = await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/v1/user/register`,{
+      const {data} = await axios.post('https://blogapp-v0g5.onrender.com/api/v1/user/register',{
         username:input.name,
         email:input.email,
         password:input.password})
