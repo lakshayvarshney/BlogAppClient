@@ -10,12 +10,12 @@ const BlogCard = ({ username, title, time, image, description,id,isUser }) => {
 
   const handleEdit = () =>{
 
-    navigate(`/blog-details/${id}`)
+    navigate(`https://blogapp-v0g5.onrender.com/blog-details/${id}`)
   }
 
   const handleDelete = async ()=>{
     try {
-      const {data} = await axios.delete(`/api/v1/blog/delete-blog/${id}`)
+      const {data} = await axios.delete(`https://blogapp-v0g5.onrender.com/api/v1/blog/delete-blog/${id}`)
       if(data.success){
         alert("Blog Deleted")
         window.location.reload();
