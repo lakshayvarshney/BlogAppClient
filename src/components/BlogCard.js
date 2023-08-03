@@ -46,7 +46,7 @@ const BlogCard = ({ username, title, time, image, description,id,isUser }) => {
       )}
         <div className="blog-content">
           <h2 className="blog-title">Title:{title}</h2>
-          <p className="blog-username">By{username}</p>
+          <p className="blog-username">By {username}</p>
           <p className="blog-created-at">Created at: {time}</p>
           <p className="blog-description">Description:{description}</p>
           

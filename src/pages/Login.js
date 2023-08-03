@@ -7,7 +7,7 @@ import { authActions } from '../redux/store'
 
 const Login = () => {
 
-  const serverurl = import.meta.env.VITE_SERVER_URL
+  
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
