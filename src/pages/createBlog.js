@@ -31,7 +31,7 @@ const CreateBlog = () => {
             user: id
         })
         if(data.success){
-            alert('Blog Created')
+            
             navigate('/my-blogs')
         }
         

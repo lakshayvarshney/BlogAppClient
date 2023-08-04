@@ -36,7 +36,7 @@ const Login = () => {
         localStorage.setItem("userId",data?.user._id);
         dispatch(authActions.login())
 
-       alert('user login successfully')
+       
        navigate('/')
         
         

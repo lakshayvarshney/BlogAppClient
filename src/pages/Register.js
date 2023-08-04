@@ -30,7 +30,7 @@ const Register = () => {
         email:input.email,
         password:input.password})
       if(data.success){
-        alert('user register successfully')
+        
         window.location.href = '/login';
        
       }

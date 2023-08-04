@@ -50,7 +50,7 @@ const BlogDetails = () => {
                 user: id
             })
             if(data.success){
-                alert('Blog Updated')
+                
                 navigate('/my-blogs')
             }
             
